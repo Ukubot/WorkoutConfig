@@ -1,3 +1,16 @@
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('.header').fadeOut();
+     }
+    else
+     {
+      $('.header').fadeIn();
+     }
+ });
+
 var app = angular.module('myApp', []);
 
 app.controller('ExerciseCtrl', function() {

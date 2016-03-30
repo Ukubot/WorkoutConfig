@@ -53,6 +53,14 @@ button:active {
   opacity: 0.7;
 }
 
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 100vw;
+}
+
 .more {
   height: 70px;
   font-size: 2em;
@@ -70,7 +78,7 @@ span {
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 300px;
   width: 500px;
   margin-left: calc(50% - 250px);
 }

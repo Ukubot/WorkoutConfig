@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Adding and removing exercises for DidITrainToday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Configure <b>Your</b> Workout!</h1>
+<div class="container">
+  <div ng-controller="ExerciseCtrl as Exe">
+    <button class="more" ng-click="Exe.data[Exe.data.length] = {}">More Exercise!</button>
+      <li ng-repeat="data in Exe.data">
+        <div class="col-md-7 form-group exercise-name-group">
+        <input type="text" placeholder="Add Your Exercise Name" ng-model="data.text" class="form-control exercise-name">
+        <span>
+        <button ng-click="Exe.data.splice($index,1)">Less Exercise..</button>
+      </span>
+        <input type="text" placeholder="Notes or reps here" class="form-control rep-name">
+      </div>
+      </li>
+  </div>
+  <button class="done" >Done!</button>
+</div>
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="javascript.js"></script>
+</body>
+</html>
